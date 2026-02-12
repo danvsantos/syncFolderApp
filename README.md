@@ -20,9 +20,11 @@ Automatic folder synchronization utility for macOS. Keep your folders in sync wi
 
 ### From DMG
 
-1. Download the latest `.dmg` from the `dist/` folder or from [Releases](https://github.com/danvsantos/syncFolderApp/releases)
-2. Open the DMG and drag **syncFolder** to your Applications folder
+1. Download the latest `syncFolder.dmg` from [`dist/last_version/`](dist/last_version/) or from [Releases](https://github.com/danvsantos/syncFolderApp/releases)
+2. Open the DMG and drag **syncFolder** to your **Applications** folder
 3. Launch syncFolder from Applications
+
+> The `dist/last_version/` folder always contains the most recent build of the app (`.app` and `.dmg`).
 
 ### Building from Source
 
@@ -35,10 +37,27 @@ cd syncFolderApp
 xcodegen generate
 
 # Build with Xcode
-xcodebuild -project syncFolder.xcodeproj -scheme syncFolder -configuration Release build
+xcodebuild -project syncFolder.xcodeproj -scheme syncFolder -configuration Release -derivedDataPath build
 
 # Or open in Xcode
 open syncFolder.xcodeproj
+```
+
+### Creating the DMG
+
+After building from source, you can create a DMG installer:
+
+```bash
+# Copy the .app to dist/last_version
+mkdir -p dist/last_version
+cp -R build/Build/Products/Release/syncFolder.app dist/last_version/
+
+# Create the DMG with an Applications shortcut
+STAGING_DIR=$(mktemp -d)
+cp -R dist/last_version/syncFolder.app "$STAGING_DIR/"
+ln -s /Applications "$STAGING_DIR/Applications"
+hdiutil create -volname "syncFolder" -srcfolder "$STAGING_DIR" -ov -format UDZO dist/last_version/syncFolder.dmg
+rm -rf "$STAGING_DIR"
 ```
 
 ## Usage
@@ -76,12 +95,17 @@ Found a bug or have a suggestion? [Open an issue](https://github.com/danvsantos/
 ## Project Structure
 
 ```
-syncFolder/
-├── App/            # App entry point and state management
-├── Models/         # Data models (SyncPair, FileManifest)
-├── Services/       # Sync engine and configuration persistence
-├── Views/          # SwiftUI views (MenuBar, Preferences, etc.)
-└── Resources/      # Assets and entitlements
+syncFolderApp/
+├── dist/
+│   └── last_version/   # Latest build (.app and .dmg)
+├── syncFolder/
+│   ├── App/            # App entry point and state management
+│   ├── Models/         # Data models (SyncPair, FileManifest)
+│   ├── Services/       # Sync engine and configuration persistence
+│   ├── Views/          # SwiftUI views (MenuBar, Preferences, etc.)
+│   └── Resources/      # Assets and entitlements
+├── project.yml         # XcodeGen configuration
+└── README.md
 ```
 
 ## License

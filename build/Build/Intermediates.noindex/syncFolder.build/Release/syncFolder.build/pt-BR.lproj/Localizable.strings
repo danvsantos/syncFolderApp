@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>%lld active</key>
+	<string>%lld ativo(s)</string>
+	<key>%lld copied</key>
+	<string>%lld copiado(s)</string>
+	<key>%lld deleted</key>
+	<string>%lld excluído(s)</string>
+	<key>%lld entries</key>
+	<string>%lld entradas</string>
+	<key>%lld error(s)</key>
+	<string>%lld erro(s)</string>
+	<key>1 minute</key>
+	<string>1 minuto</string>
+	<key>10 minutes</key>
+	<string>10 minutos</string>
+	<key>120 minutes</key>
+	<string>120 minutos</string>
+	<key>15 minutes</key>
+	<string>15 minutos</string>
+	<key>2 minutes</key>
+	<string>2 minutos</string>
+	<key>30 minutes</key>
+	<string>30 minutos</string>
+	<key>5 minutes</key>
+	<string>5 minutos</string>
+	<key>60 minutes</key>
+	<string>60 minutos</string>
+	<key>About</key>
+	<string>Sobre</string>
+	<key>Activity</key>
+	<string>Atividade</string>
+	<key>Add</key>
+	<string>Adicionar</string>
+	<key>Add Sync Pair</key>
+	<string>Adicionar Par de Sincronização</string>
+	<key>Add a sync pair to start synchronizing folders automatically.</key>
+	<string>Adicione um par de sincronização para começar a sincronizar pastas automaticamente.</string>
+	<key>Add sync pair</key>
+	<string>Adicionar par de sincronização</string>
+	<key>Are you sure you want to remove "%@"? Files in the destination will not be deleted.</key>
+	<string>Tem certeza que deseja remover "%@"? Os arquivos no destino não serão excluídos.</string>
+	<key>Author: Daniel Vieira</key>
+	<string>Autor: Daniel Vieira</string>
+	<key>Automatic folder synchronization for macOS.
+Keep your folders in sync with configurable polling intervals.</key>
+	<string>Sincronização automática de pastas para macOS.
+Mantenha suas pastas sincronizadas com intervalos de verificação configuráveis.</string>
+	<key>Bidirectional</key>
+	<string>Bidirecional</string>
+	<key>Browse...</key>
+	<string>Procurar...</string>
+	<key>Cancel</key>
+	<string>Cancelar</string>
+	<key>Cannot write to destination: %@</key>
+	<string>Não é possível escrever no destino: %@</string>
+	<key>Clear Log</key>
+	<string>Limpar Log</string>
+	<key>Conflicts resolved by keeping the most recently modified file.</key>
+	<string>Conflitos resolvidos mantendo o arquivo modificado mais recentemente.</string>
+	<key>DISABLED</key>
+	<string>DESATIVADO</string>
+	<key>Delete</key>
+	<string>Excluir</string>
+	<key>Delete Sync Pair?</key>
+	<string>Excluir Par de Sincronização?</string>
+	<key>Delete orphans</key>
+	<string>Excluir órfãos</string>
+	<key>Delete orphans in destination</key>
+	<string>Excluir arquivos órfãos no destino</string>
+	<key>Destination:</key>
+	<string>Destino:</string>
+	<key>Disabled</key>
+	<string>Desativado</string>
+	<key>Edit Sync Pair</key>
+	<string>Editar Par de Sincronização</string>
+	<key>Edit...</key>
+	<string>Editar...</string>
+	<key>Enable sync notifications</key>
+	<string>Ativar notificações de sincronização</string>
+	<key>Enabled</key>
+	<string>Ativado</string>
+	<key>Error</key>
+	<string>Erro</string>
+	<key>Every %lld min</key>
+	<string>A cada %lld min</string>
+	<key>Exclude Filters</key>
+	<string>Filtros de Exclusão</string>
+	<key>General</key>
+	<string>Geral</string>
+	<key>GitHub Repository</key>
+	<string>Repositório GitHub</string>
+	<key>Interval:</key>
+	<string>Intervalo:</string>
+	<key>Launch syncFolder at Login</key>
+	<string>Iniciar syncFolder no Login</string>
+	<key>Licensed under the MIT License</key>
+	<string>Licenciado sob a Licença MIT</string>
+	<key>Name:</key>
+	<string>Nome:</string>
+	<key>No Activity Yet</key>
+	<string>Nenhuma Atividade Ainda</string>
+	<key>No Sync Pairs</key>
+	<string>Nenhum Par de Sincronização</string>
+	<key>No changes</key>
+	<string>Sem alterações</string>
+	<key>No pairs</key>
+	<string>Nenhum par</string>
+	<key>No sync pairs configured</key>
+	<string>Nenhum par de sincronização configurado</string>
+	<key>OFF</key>
+	<string>OFF</string>
+	<key>One-way (Source → Destination)</key>
+	<string>Unidirecional (Origem → Destino)</string>
+	<key>Open Preferences</key>
+	<string>Abrir Preferências</string>
+	<key>Preferences...</key>
+	<string>Preferências...</string>
+	<key>Presets:</key>
+	<string>Predefinidos:</string>
+	<key>Quit syncFolder</key>
+	<string>Encerrar syncFolder</string>
+	<key>Save</key>
+	<string>Salvar</string>
+	<key>Scan failed: %@</key>
+	<string>Falha na varredura: %@</string>
+	<key>Show macOS notifications when syncs complete with changes or errors.</key>
+	<string>Mostrar notificações do macOS quando sincronizações completarem com alterações ou erros.</string>
+	<key>Source and destination must be different.</key>
+	<string>Origem e destino devem ser diferentes.</string>
+	<key>Source folder not found: %@</key>
+	<string>Pasta de origem não encontrada: %@</string>
+	<key>Source:</key>
+	<string>Origem:</string>
+	<key>Sync All</key>
+	<string>Sincronizar Tudo</string>
+	<key>Sync All Now</key>
+	<string>Sincronizar Tudo Agora</string>
+	<key>Sync Mode:</key>
+	<string>Modo de Sincronização:</string>
+	<key>Sync Now</key>
+	<string>Sincronizar Agora</string>
+	<key>Sync Pairs</key>
+	<string>Pares de Sincronização</string>
+	<key>Sync activity will appear here.</key>
+	<string>A atividade de sincronização aparecerá aqui.</string>
+	<key>Sync completed</key>
+	<string>Sincronização concluída</string>
+	<key>Sync failed</key>
+	<string>Falha na sincronização</string>
+	<key>Sync now</key>
+	<string>Sincronizar agora</string>
+	<key>Synced %@</key>
+	<string>Sincronizado %@</string>
+	<key>Syncing</key>
+	<string>Sincronizando</string>
+	<key>Syncing...</key>
+	<string>Sincronizando...</string>
+	<key>Version 1.1.0</key>
+	<string>Versão 1.0.0</string>
+	<key>Waiting for first sync</key>
+	<string>Aguardando primeira sincronização</string>
+	<key>When enabled, files deleted from the source will also be deleted from the destination.</key>
+	<string>Quando ativado, arquivos excluídos da origem também serão excluídos do destino.</string>
+	<key>When enabled, syncFolder will start automatically when you log in to your Mac.</key>
+	<string>Quando ativado, o syncFolder iniciará automaticamente ao fazer login no Mac.</string>
+	<key>syncFolder</key>
+	<string>syncFolder</string>
+	<key>syncFolder Preferences</key>
+	<string>Preferências do syncFolder</string>
+</dict>
+</plist>
