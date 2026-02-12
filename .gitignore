@@ -13,9 +13,6 @@ Packages/
 Package.pins
 Package.resolved
 
-# Distribution / Build artifacts
-dist/
-
 # macOS
 .DS_Store
 .AppleDouble
