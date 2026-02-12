@@ -65,9 +65,7 @@ Contributions are welcome! Here's how you can help:
 
 ### Ideas for Contribution
 
-- Localization / internationalization support
-- Bidirectional sync
-- File filter patterns (ignore specific files or extensions)
+- Localization / internationalization support (ES e CH)
 - Notifications for sync events
 - iCloud / network folder support improvements
 
