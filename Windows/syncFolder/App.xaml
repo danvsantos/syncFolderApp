@@ -1,0 +1,89 @@
+<Application x:Class="syncFolder.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:views="clr-namespace:syncFolder.Views"
+             ShutdownMode="OnExplicitShutdown">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Converters -->
+            <views:BoolToVisibilityConverter x:Key="BoolToVisibility" />
+            <views:InverseBoolConverter x:Key="InverseBool" />
+            <views:NullToVisibilityConverter x:Key="NullToVisibility" />
+            <views:RelativeDateConverter x:Key="RelativeDate" />
+            <views:StatusToColorConverter x:Key="StatusToColor" />
+            <views:SyncModeToArrowConverter x:Key="SyncModeToArrow" />
+            <views:PathAbbreviator x:Key="PathAbbreviator" />
+
+            <!-- Colors -->
+            <Color x:Key="BlueColor">#3B82F6</Color>
+            <Color x:Key="GreenColor">#22C55E</Color>
+            <Color x:Key="OrangeColor">#F59E0B</Color>
+            <Color x:Key="RedColor">#EF4444</Color>
+            <Color x:Key="GrayColor">#9CA3AF</Color>
+            <Color x:Key="TealColor">#14B8A6</Color>
+
+            <SolidColorBrush x:Key="BlueBrush" Color="{StaticResource BlueColor}" />
+            <SolidColorBrush x:Key="GreenBrush" Color="{StaticResource GreenColor}" />
+            <SolidColorBrush x:Key="OrangeBrush" Color="{StaticResource OrangeColor}" />
+            <SolidColorBrush x:Key="RedBrush" Color="{StaticResource RedColor}" />
+            <SolidColorBrush x:Key="GrayBrush" Color="{StaticResource GrayColor}" />
+            <SolidColorBrush x:Key="TealBrush" Color="{StaticResource TealColor}" />
+
+            <!-- Button hover style -->
+            <Style x:Key="HoverButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Padding" Value="12,6" />
+                <Setter Property="HorizontalContentAlignment" Value="Left" />
+                <Setter Property="Cursor" Value="Hand" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="border"
+                                    Background="{TemplateBinding Background}"
+                                    Padding="{TemplateBinding Padding}"
+                                    CornerRadius="4">
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                  VerticalAlignment="Center" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="border" Property="Background" Value="#14000000" />
+                                </Trigger>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="border" Property="Background" Value="#1E000000" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Opacity" Value="0.5" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- Flat link button style -->
+            <Style x:Key="LinkButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Foreground" Value="{StaticResource BlueBrush}" />
+                <Setter Property="Cursor" Value="Hand" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <TextBlock x:Name="text"
+                                       Text="{TemplateBinding Content}"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       TextDecorations="Underline" />
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="text" Property="Opacity" Value="0.8" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,40 @@
+name: syncFolder
+options:
+  bundleIdPrefix: com.syncfolder
+  deploymentTarget:
+    macOS: "13.0"
+  xcodeVersion: "16.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+  knownRegions:
+    - en
+    - pt-BR
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+
+targets:
+  syncFolder:
+    type: application
+    platform: macOS
+    sources:
+      - path: syncFolder
+        excludes:
+          - "**/.DS_Store"
+    settings:
+      base:
+        INFOPLIST_FILE: syncFolder/Info.plist
+        CODE_SIGN_ENTITLEMENTS: syncFolder/Resources/syncFolder.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        PRODUCT_BUNDLE_IDENTIFIER: com.syncfolder.syncFolder
+        MARKETING_VERSION: "1.1.0"
+        CURRENT_PROJECT_VERSION: 2
+        GENERATE_INFOPLIST_FILE: false
+        COMBINE_HIDPI_IMAGES: true
+        CODE_SIGN_IDENTITY: "-"
+        PRODUCT_NAME: syncFolder
+        LD_RUNPATH_SEARCH_PATHS:
+          - "@executable_path/../Frameworks"
+        SWIFT_STRICT_CONCURRENCY: minimal

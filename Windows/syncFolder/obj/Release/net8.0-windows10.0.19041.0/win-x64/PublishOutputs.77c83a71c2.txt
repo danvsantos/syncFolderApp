@@ -1,0 +1,2 @@
+/Users/daniel/Work/syncFolderApp/Windows/dist/syncFolder.pdb
+/Users/daniel/Work/syncFolderApp/Windows/dist/syncFolder.exe
